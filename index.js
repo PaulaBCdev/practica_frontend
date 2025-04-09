@@ -4,6 +4,7 @@ import { showProductsController } from './show-products/productsController.js'
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.show-products')
     const loader = document.querySelector('.loader')
+    const notifications = document.querySelector('.notifications')
     const { show, hide } = loaderController(loader)
 
     container.addEventListener('load-products-started', () => {
