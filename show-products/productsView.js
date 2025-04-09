@@ -13,5 +13,5 @@ export function productCard(product) {
 }
 
 export function noProductsAdvice() {
-    return '<h3>No hay productos disponibles en este momento.</h3>'
+    return '<h3>No products available at this time.</h3>'
 }

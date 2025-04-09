@@ -6,7 +6,7 @@ export async function getProducts() {
         const response = await fetch('http://localhost:8000/api/products')
         products = await response.json()
     } catch (error) {
-        throw new Error('No ha sido posible obtener los productos. Inténtalo de nuevo más tarde.')
+        throw new Error('It was not possible to obtain the products. Please try again later.')
     }
 
     return products
