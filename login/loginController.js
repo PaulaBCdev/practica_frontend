@@ -15,9 +15,7 @@ export function loginController(form) {
         const emailRegExp = new RegExp(REGEXP.mail)
         if (!emailRegExp.test(email)) {
             const event = new CustomEvent('login-error', {
-                detail: {
-                    message: 'incorrect email format'
-                }
+                detail: 'incorrect email format'
             })
             form.dispatchEvent(event)
         } else {

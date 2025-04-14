@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Product</title>
+</head>
+
+<body>
+    <h1>Create new product ad</h1>
+
+    <form enctype="multipart/form-data">
+
+        <label for="product-name">Product name</label>
+        <input type="text" id="product-name" name="product-name" required>
+
+        <label for="product-description">Description</label>
+        <textarea name="product-description" id="product-description" required maxlength="50"></textarea>
+
+        <label for="product-price">Price(€)</label>
+        <input type="number" name="product-price" id="product-price" required>
+
+        <div>
+            <p>Ad type</p>
+
+            <label for="sell-product">Sell</label>
+            <input type="radio" id="sell-product" name="ad-type" value="sell" required>
+
+            <label for="buy-product">Buy</label>
+            <input type="radio" id="buy-product" name="ad-type" value="buy">
+        </div>
+
+        <label for="product-img">Upload image</label>
+        <input type="file" name="product-img" id="product-img">
+
+        <button>Post ad</button>
+    </form>
+
+    <div class="notifications"></div>
+
+    <script type="module" src="./new-ad.js"></script>
+
+</body>
+
+</html>
