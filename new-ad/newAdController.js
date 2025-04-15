@@ -20,10 +20,17 @@ export function newAdController(form) {
         const productImage = productImageElement.files[0];
 
         try {
+
+            const loadEvent = new CustomEvent('load-new-ad-started')
+            form.dispatchEvent(loadEvent)
+
             await newAd(productName, productDescription, productPrice, adType, productImage)
 
             const event = new CustomEvent('newAd-ok', {
-                detail: 'Your ad was created successfully.'
+                detail: {
+                    message: 'Your ad was created successfully.',
+                    type: 'success'
+                }
             })
             form.dispatchEvent(event)
 
@@ -35,6 +42,9 @@ export function newAdController(form) {
             const event = new CustomEvent('newAd-error', {
                 detail: error
             })
+            form.dispatchEvent(event)
+        } finally {
+            const event = new CustomEvent('load-new-ad-finished')
             form.dispatchEvent(event)
         }
 
