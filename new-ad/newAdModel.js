@@ -20,7 +20,6 @@ export async function newAd(productName, productDescription, productPrice, adTyp
         image = imageJson.path
     }
 
-    console.log(image)
 
     const response = await fetch("http://localhost:8000/api/products", {
         method: "POST",

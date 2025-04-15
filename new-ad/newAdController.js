@@ -29,7 +29,7 @@ export function newAdController(form) {
 
             setTimeout(() => {
                 window.location = '/'
-            }, 5000)
+            }, 2000)
 
         } catch (error) {
             const event = new CustomEvent('newAd-error', {
