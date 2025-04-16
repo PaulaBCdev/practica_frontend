@@ -28,7 +28,8 @@ function drawProducts(products, container) {
     }
 
     products.forEach(product => {
-        const printedProducts = document.createElement('div')
+        const printedProducts = document.createElement('a')
+        printedProducts.setAttribute("href", `./ad-detail.html?id=${product.id}`)
         printedProducts.innerHTML = productCard(product)
 
         container.appendChild(printedProducts)

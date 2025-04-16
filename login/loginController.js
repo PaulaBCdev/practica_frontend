@@ -26,20 +26,25 @@ export function loginController(form) {
 
     const handleLoginUser = async (email, password, form) => {
         try {
+            const event = new CustomEvent('login-started')
+            form.dispatchEvent(event)
+
             const token = await loginUser(email, password)
 
             localStorage.setItem("token", token)
 
             setTimeout(() => {
                 window.location = "/"
-            }, 2000)
+            }, 1000)
 
         } catch (error) {
             const event = new CustomEvent('login-error', {
                 detail: "incorrect email or password"
             })
             form.dispatchEvent(event)
+        } finally {
+            const event = new CustomEvent('login-finished')
+            form.dispatchEvent(event)
         }
-
     }
 }
