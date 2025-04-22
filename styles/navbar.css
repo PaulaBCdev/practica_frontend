@@ -58,6 +58,12 @@
             font-size: 18px;
         }
 
+        .nav-btn.logout {
+            border: none;
+            background: none;
+            font-weight: bold;
+        }
+
         #menu-btn:checked+.burguer-btn+.session {
             display: flex;
             opacity: 1;
@@ -93,7 +99,8 @@
                     padding: 10px;
                     border-radius: 10px;
 
-                    a {
+                    a,
+                    button {
                         transition: color 0.3s;
                     }
                 }
@@ -106,7 +113,8 @@
     .header .nav .session li:hover {
         background-color: var(--main-color);
 
-        a {
+        a,
+        button {
             color: var(--secondary-text-color);
         }
 

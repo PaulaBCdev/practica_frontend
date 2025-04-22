@@ -1,0 +1,35 @@
+.show-products {
+    display: grid;
+    grid-template-columns: repeat(1, 400px);
+    justify-content: center;
+    gap: 2rem;
+
+    .card {
+        border: solid var(--text-color);
+        border-radius: 20px;
+
+        .ad-info {
+            padding: 1rem;
+        }
+
+        .img-container {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            overflow: hidden;
+            border-bottom: solid var(--text-color);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (width > 768px) {
+    .show-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

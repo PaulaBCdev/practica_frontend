@@ -1,15 +1,28 @@
 
 export function productCard(product) {
     let productView = `
-        <p>${product.name}</p>
-        <p>${product.description}</p>
-        <p>${product.type} - ${product.price}€</p>
+        <div class="ad-type">
+            ${product.type}
+        </div>
+
+        <div class="ad-info">
+            <p class="ad-price">${product.price}€</p>
+            <p class="ad-name">${product.name}</p>
+            <p class="ad-desc">${product.description}</p>
+        </div>
     `
     if (product.photo) {
-        productView = `<img src='${product.photo}'></img>` + productView
+        productView = `
+        <div class="img-container">
+            <img src='${product.photo}'></img>
+        </div>` + productView
     }
 
-    return productView
+    return `
+    <div class="card">
+    ${productView}
+    </div>
+    `
 }
 
 export function noProductsAdvice() {
