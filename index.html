@@ -4,18 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wajapop</title>
-    <link rel="stylesheet" href="./loader/loader.css">
-    <link rel="stylesheet" href="./notifications/notifications.css">
+    <title>Zoco</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/loader.css">
+    <link rel="stylesheet" href="./styles/notifications.css">
 </head>
 
-<body>
-    <div class="session"></div>
-    <h1>Listado de anuncios</h1>
+<body class="main-bg">
+    <!-- <div class="session"></div> -->
+    <h1 class="sr-only">Zoco - Ads list</h1>
 
-    <div class="notifications"></div>
-    <div class="loader hidden"></div>
-    <div class="show-products"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <picture>
+            <source media="(width > 768px)" srcset="./assets/ZOCO-recto.svg">
+            <source srcset="./assets/ZOCO-cuadrado.svg">
+            <img class="logo" src="./assets/ZOCO-cuadrado.svg">
+        </picture>
+
+        <nav class="nav">
+            <input type="checkbox" id="menu-btn" name="menu-btn">
+            <label for="menu-btn" class="burguer-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="session"></ul>
+        </nav>
+    </header>
+
+    <!-- LANDING PAGE -->
+    <main class="main">
+        <div class="notifications"></div>
+        <div class="loader hidden"></div>
+        <div class="show-products"></div>
+    </main>
+
     <script type="module" src="./index.js"></script>
 </body>
 

@@ -1,0 +1,58 @@
+:root {
+    --bg-color: #F9F9F9;
+    --main-text-color: #FF4F8B;
+    --text-color: #2C2C2C;
+    --secondary-text-color: #F9F9F9;
+    --main-color: #FF4F8B;
+    --main-color-light: #ff81ab;
+    --secondary-color: #FFE275;
+    --tertiary-color: #00C2A8;
+    --border-color: #2C2C2C;
+    --input-color: rgba(217, 217, 217, 37);
+    font-family: 'Baloo 2';
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.main-bg {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 768px;
+}
+
+@media screen and (width > 768px) {
+    .main {
+        max-width: 1440px;
+        width: 70%;
+    }
+}
+
+li {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    list-style: none;
+}

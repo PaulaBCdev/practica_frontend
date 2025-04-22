@@ -2,14 +2,22 @@
 
 export const buildAuthorizedSession = () => {
     return `
-    <a href="./new-ad.html">Create Ad</a>
-    <button class="logout">Logout</button>
+    <li>
+        <a class="nav-btn" href="./new-ad.html">CREATE AD</a>
+    </li>
+    <li>
+        <button class="nav-btn logout">LOGOUT</button>
+    </li>
     `;
 }
 
 export function buildUnauthorizedSession() {
     return `
-        <a href="./login.html">Login</a>
-        <a href="./register.html">Register</a>
+    <li>
+        <a class="nav-btn" href="./login.html">LOGIN</a>
+    </li>
+    <li>
+        <a class="nav-btn" href="./register.html">REGISTER</a>
+    </li>
     `
 }
