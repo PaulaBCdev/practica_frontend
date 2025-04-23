@@ -70,9 +70,7 @@ form {
     justify-content: center;
     gap: 1rem;
 
-
-
-    .register-element {
+    .form-element {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -84,12 +82,14 @@ form {
             color: var(--text-color);
         }
 
-        input {
+        input,
+        textarea {
             width: 65%;
             border: solid var(--border-color);
             border-radius: 20px;
             border-width: 2px;
             background-color: var(--input-color);
+            padding: 0 10px;
         }
     }
 
@@ -97,7 +97,7 @@ form {
         justify-self: center;
         margin-top: 1.5em;
 
-        .register-btn {
+        .form-btn {
             border: none;
             border-radius: 20px;
             background-color: var(--main-color);
@@ -110,7 +110,7 @@ form {
 }
 
 @media screen and (hover: hover) {
-    form .btn-element .register-btn:hover {
+    form .btn-element .form-btn:hover {
         cursor: pointer;
         background-color: var(--tertiary-color);
     }

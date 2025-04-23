@@ -1,0 +1,33 @@
+fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    margin: 0.5rem 2rem 0 2rem;
+    padding: 0;
+
+    .ad-types {
+        padding-top: 5px;
+        font-weight: bold;
+        color: var(--text-color);
+    }
+
+    .type-option {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        label {
+            justify-self: center;
+        }
+
+        input {
+            width: 65%;
+            border: solid var(--border-color);
+            border-radius: 20px;
+            border-width: 2px;
+            background-color: var(--input-color);
+            padding: 0 10px;
+        }
+    }
+}

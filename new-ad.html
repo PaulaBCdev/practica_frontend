@@ -4,44 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Product</title>
+    <title>New Ad</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/loader.css">
     <link rel="stylesheet" href="./styles/notifications.css">
+    <link rel="stylesheet" href="./styles/new-ad.css">
 </head>
 
-<body>
-    <h1>Create new product ad</h1>
+<body class="main-bg">
+    <h1 class="sr-only">Zoco - Create new ad</h1>
 
-    <form enctype="multipart/form-data">
+    <!-- HEADER -->
+    <header class="header">
+        <picture>
+            <source media="(width > 768px)" srcset="./assets/ZOCO-recto.svg">
+            <source srcset="./assets/ZOCO-cuadrado.svg">
+            <img class="logo" src="./assets/ZOCO-cuadrado.svg">
+        </picture>
 
-        <label for="product-name">Product name</label>
-        <input type="text" id="product-name" name="product-name" required>
+        <nav class="nav">
+            <input type="checkbox" id="menu-btn" name="menu-btn">
+            <label for="menu-btn" class="burguer-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-        <label for="product-description">Description</label>
-        <textarea name="product-description" id="product-description" required maxlength="200"></textarea>
+            <ul class="session"></ul>
+        </nav>
+    </header>
 
-        <label for="product-price">Price(€)</label>
-        <input type="number" name="product-price" id="product-price" required>
+    <!-- FORM -->
+    <main class="main new-ad">
+        <h2 class="heading-2">Create new ad</h2>
 
-        <div>
-            <p>Ad type</p>
+        <form class="form" enctype="multipart/form-data">
 
-            <label for="sell-product">Sell</label>
-            <input type="radio" id="sell-product" name="ad-type" value="sell" required>
+            <div class="form-element">
+                <label for="product-name">Product name</label>
+                <input type="text" id="product-name" name="product-name" required>
+            </div>
 
-            <label for="buy-product">Buy</label>
-            <input type="radio" id="buy-product" name="ad-type" value="buy">
-        </div>
+            <div class="form-element">
+                <label for="product-description">Description</label>
+                <textarea name="product-description" id="product-description" required maxlength="200"></textarea>
+            </div>
 
-        <label for="product-img">Upload image</label>
-        <input type="file" name="product-img" id="product-img">
+            <div class="form-element">
+                <label for="product-price">Price(€)</label>
+                <input type="number" name="product-price" id="product-price" required>
+            </div>
 
-        <button>Post ad</button>
-    </form>
+            <!-- <div>
+                <p>Ad type</p>
 
-    <div class="notifications"></div>
-    <div class="loader hidden"></div>
+                <label for="sell-product">Sell</label>
+                <input type="radio" id="sell-product" name="ad-type" value="sell" required>
+
+                <label for="buy-product">Buy</label>
+                <input type="radio" id="buy-product" name="ad-type" value="buy">
+            </div> -->
+
+            <fieldset>
+                <p class="ad-types">Ad type</p>
+
+                <div class="type-option">
+                    <label for="sell-product">Sell</label>
+                    <input type="radio" id="sell-product" name="ad-type" value="sell" required>
+                </div>
+
+                <div class="type-option">
+                    <label for="buy-product">Buy</label>
+                    <input type="radio" id="buy-product" name="ad-type" value="buy">
+                </div>
+            </fieldset>
+
+            <label for="product-img">Upload image</label>
+            <input type="file" name="product-img" id="product-img">
+
+            <button>Post ad</button>
+        </form>
+
+        <div class="notifications"></div>
+        <div class="loader hidden"></div>
+    </main>
 
     <script type="module" src="./new-ad.js"></script>
 
