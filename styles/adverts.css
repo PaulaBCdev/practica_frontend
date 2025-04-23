@@ -5,11 +5,53 @@
     gap: 2rem;
 
     .card {
+        position: relative;
         border: solid var(--text-color);
         border-radius: 20px;
 
+        .ad-type {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 0.5em 1.5em;
+            margin: 0;
+            border-radius: 40px;
+        }
+
+        .ad-type.sell {
+            border: solid #00C2A8;
+            background-color: #00C2A8;
+        }
+
+        .ad-type.buy {
+            border: solid #FFE275;
+            background-color: #FFE275;
+        }
+
         .ad-info {
             padding: 1rem;
+            max-width: 100%;
+
+            .ad-price {
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0;
+                margin-bottom: 0.5em;
+            }
+
+            .ad-name {
+                font-size: 20px;
+                margin: 0;
+                margin-bottom: 0.5em;
+            }
+
+            .ad-desc {
+                margin: 0;
+                margin-bottom: 0.5em;
+            }
         }
 
         .img-container {
@@ -30,6 +72,10 @@
 
 @media screen and (width > 768px) {
     .show-products {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+
+        .card {
+            height: 100%;
+        }
     }
 }

@@ -1,16 +1,19 @@
 
-export function productCard(product) {
+export function productCard(product,) {
+    const adType = product.type.toUpperCase() === "BUY" ? "buy" : "sell"
+
+    const description = product.description.length > 40 ? product.description.slice(0, 40) + "..." : product.description
+
     let productView = `
-        <div class="ad-type">
-            ${product.type}
-        </div>
+            <p class="ad-type ${adType}">${product.type.toUpperCase()}</p>
 
         <div class="ad-info">
-            <p class="ad-price">${product.price}€</p>
-            <p class="ad-name">${product.name}</p>
-            <p class="ad-desc">${product.description}</p>
+            <p class="ad-price">${product.price} EUR</p>
+            <p class="ad-name">${product.name.charAt(0).toUpperCase() + product.name.slice(1).toLowerCase()}</p>
+            <p class="ad-desc">${description.charAt(0).toUpperCase() + description.slice(1).toLowerCase()}</p>
         </div>
     `
+
     if (product.photo) {
         productView = `
         <div class="img-container">

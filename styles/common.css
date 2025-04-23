@@ -46,7 +46,7 @@ a {
 @media screen and (width > 768px) {
     .main {
         max-width: 1440px;
-        width: 70%;
+        width: 90%;
     }
 }
 
