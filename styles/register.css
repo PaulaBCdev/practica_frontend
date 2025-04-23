@@ -1,0 +1,12 @@
+.register {
+
+    .form {
+        .register-element {
+
+            #password-confirm {
+                height: 60%;
+                width: 70%;
+            }
+        }
+    }
+}
