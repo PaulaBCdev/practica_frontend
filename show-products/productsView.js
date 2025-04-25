@@ -1,11 +1,11 @@
 
-export function productCard(product,) {
+export function productCard(product) {
     const adType = product.type.toUpperCase() === "BUY" ? "buy" : "sell"
 
     const description = product.description.length > 40 ? product.description.slice(0, 40) + "..." : product.description
 
     let productView = `
-            <p class="ad-type ${adType}">${product.type.toUpperCase()}</p>
+        <p class="ad-type ${adType}">${product.type.toUpperCase()}</p>
 
         <div class="ad-info">
             <p class="ad-price">${product.price} EUR</p>

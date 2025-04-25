@@ -4,8 +4,11 @@ import { buildAdDetail, buildRemoveAdButton } from "./adDetailView.js"
 export async function adDetailController(adContainer, adId) {
 
     const showRemoveAdButton = () => {
+        const ownerContainer = document.querySelector('.ad-owner')
+
+
         const removeButton = buildRemoveAdButton()
-        adContainer.appendChild(removeButton)
+        ownerContainer.appendChild(removeButton)
 
         removeButton.addEventListener("click", async () => {
             console.log(adId)
@@ -14,6 +17,16 @@ export async function adDetailController(adContainer, adId) {
                 window.location = '/'
             }
         })
+    }
+
+    const showOwner = (adDetail) => {
+        console.log(adDetail)
+        const ownerContainer = document.querySelector('.ad-owner')
+
+        const adOwner = `
+            <p class="ad-p">Ad owner: </p>
+            <p class="ad-p owner">${adDetail.user.name}</p>`
+        ownerContainer.innerHTML = adOwner
     }
 
     try {
@@ -28,6 +41,8 @@ export async function adDetailController(adContainer, adId) {
         const loggedUser = await getLoggedUser()
         if (adOwner == loggedUser.id) {
             showRemoveAdButton()
+        } else {
+            showOwner(adDetail)
         }
     } catch (error) {
         const event = new CustomEvent('detail-error', {
