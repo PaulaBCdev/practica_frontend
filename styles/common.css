@@ -90,6 +90,8 @@ form {
             border-width: 2px;
             background-color: var(--input-color);
             padding: 0 10px;
+            resize: vertical;
+
         }
     }
 
