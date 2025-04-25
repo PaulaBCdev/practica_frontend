@@ -9,6 +9,7 @@
         border: solid var(--text-color);
         border-radius: 20px;
         border-width: 2px;
+        overflow: hidden;
 
         .ad-type {
             position: absolute;
@@ -58,7 +59,6 @@
         .img-container {
             aspect-ratio: 1 / 1;
             width: 100%;
-            overflow: hidden;
             border-bottom: solid var(--text-color);
             border-width: 2px;
 

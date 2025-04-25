@@ -61,7 +61,6 @@
             <div class="file-container">
                 <label class="upload-img-label">Upload image</label>
                 <div class="upload-img-container">
-                    <label for="product-img" class="file-label">Select file</label>
                     <input type="file" name="product-img" id="product-img">
                 </div>
             </div>
@@ -70,21 +69,21 @@
                 <p class="ad-types">Ad type</p>
 
                 <div class="types">
-                    <div class="type-option">
+                    <label class="type-option" for="sell-product">
                         <div class="input-container">
                             <input type="radio" id="sell-product" name="ad-type" value="sell" required>
                             <div class="dot"></div>
                         </div>
-                        <label for="sell-product">Sell</label>
-                    </div>
+                        <p>Sell</p>
+                    </label>
 
-                    <div class="type-option">
+                    <label class="type-option" for="buy-product">
                         <div class="input-container">
                             <input type="radio" id="buy-product" name="ad-type" value="buy">
                             <div class="dot"></div>
                         </div>
-                        <label for="buy-product">Buy</label>
-                    </div>
+                        <p>Buy</p>
+                    </label>
                 </div>
             </fieldset>
 
