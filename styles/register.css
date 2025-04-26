@@ -1,7 +1,7 @@
 .register {
 
     .form {
-        .register-element {
+        .form-element {
 
             .password-confirm-element {
                 padding: 0;
@@ -9,7 +9,7 @@
 
             #password-confirm {
                 height: 67%;
-                width: 70%;
+                width: 69%;
             }
         }
     }
