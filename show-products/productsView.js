@@ -4,7 +4,13 @@ export function productCard(product) {
 
     const description = product.description.length > 40 ? product.description.slice(0, 40) + "..." : product.description
 
+    const photo = product.photo ? product.photo : './assets/foto-not-available.png'
+
     let productView = `
+        <div class="img-container">
+            <img src='${photo}' />
+        </div>
+
         <p class="ad-type ${adType}">${product.type.toUpperCase()}</p>
 
         <div class="ad-info">
@@ -13,13 +19,6 @@ export function productCard(product) {
             <p class="ad-desc">${description.charAt(0).toUpperCase() + description.slice(1).toLowerCase()}</p>
         </div>
     `
-
-    if (product.photo) {
-        productView = `
-        <div class="img-container">
-            <img src='${product.photo}'></img>
-        </div>` + productView
-    }
 
     return `
     <div class="card">
