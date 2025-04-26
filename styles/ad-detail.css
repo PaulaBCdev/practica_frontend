@@ -1,6 +1,4 @@
 .ad-container {
-    /* display: grid;
-    justify-content: center; */
 
     .ad-img {
         place-self: center;
@@ -17,68 +15,67 @@
         }
     }
 
-    .ad-detail {
-        margin: 0 30px;
+    .ad-info {
+        margin: 0 5%;
 
         .ad-p {
             margin: 15px 0;
         }
-    }
 
-    .name-price-type {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-
-        .name-price {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .ad-type {
-            top: 10px;
-            right: 10px;
-            text-align: center;
-            font-size: 15px;
-            font-weight: bold;
-            padding: 0.5em 1.5em;
-            margin: 0;
-            border-radius: 40px;
-
-        }
-
-        .ad-type.sell {
-            border: solid #00C2A8;
-            background-color: #00C2A8;
-        }
-
-        .ad-type.buy {
-            border: solid #FFE275;
-            background-color: #FFE275;
-        }
-    }
-
-    .desc {
-        font-size: 18px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .update-owner {
-        display: flex;
-        justify-content: space-between;
-
-        .ad-owner {
+        .name-price-type {
             display: flex;
-            gap: 5px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
 
-            .owner {
+            .name-price {
+                font-size: 20px;
                 font-weight: bold;
+            }
+
+            .ad-type {
+                top: 10px;
+                right: 10px;
+                text-align: center;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 0.5em 1.5em;
+                margin: 0;
+                border-radius: 40px;
+
+            }
+
+            .ad-type.sell {
+                border: solid #00C2A8;
+                background-color: #00C2A8;
+            }
+
+            .ad-type.buy {
+                border: solid #FFE275;
+                background-color: #FFE275;
+            }
+        }
+
+        .desc {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .update-owner {
+            display: flex;
+            justify-content: space-between;
+
+            .ad-owner {
+                display: flex;
+                gap: 5px;
+
+                .owner {
+                    font-weight: bold;
+                }
             }
         }
     }
-
 }
 
 .trash-btn {
@@ -90,5 +87,35 @@
         font-size: 20px;
         width: 24px;
         height: 24px;
+    }
+}
+
+@media (width > 600px) {
+    .ad-container {
+
+        .ad-img {
+            width: 700px;
+            height: 500px;
+        }
+
+        .ad-info {
+            margin: 0 10%;
+        }
+    }
+}
+
+@media (width > 768px) {
+    .ad-container {
+        .ad-info {
+            margin: 0 15%;
+        }
+    }
+}
+
+@media (width > 992px) {
+    .ad-container {
+        .ad-info {
+            margin: 0 25%;
+        }
     }
 }

@@ -5,24 +5,26 @@ export function buildAdDetail(ad) {
     const adType = ad.type.toUpperCase() === "BUY" ? "buy" : "sell"
 
     let adView = `
-        <div class="ad-detail name-price-type">
-            <div class="name-price">
-                <p class="ad-p name">${ad.name.charAt(0).toUpperCase() + ad.name.slice(1)}</p>  
-                <p class="ad-p price">${ad.price} EUR</p>
+        <div class="ad-info">
+            <div class="name-price-type">
+                <div class="name-price">
+                    <p class="ad-p name">${ad.name.charAt(0).toUpperCase() + ad.name.slice(1)}</p>  
+                    <p class="ad-p price">${ad.price} EUR</p>
+                </div>
+
+                <div class="type">
+                    <p class="ad-p ad-type ${adType}">${ad.type.toUpperCase()}</p>
+                </div>
             </div>
 
-            <div class="type">
-                <p class="ad-p ad-type ${adType}">${ad.type.toUpperCase()}</p>
+            <div class="desc">
+                <p class="ad-p">${ad.description.charAt(0).toUpperCase() + ad.description.slice(1)}</p>
             </div>
-        </div>
 
-        <div class="ad-detail desc">
-            <p class="ad-p">${ad.description.charAt(0).toUpperCase() + ad.description.slice(1)}</p>
-        </div>
-
-        <div class="ad-detail update-owner">
-            <p class="ad-p update">Last updated: ${date.toLocaleDateString()}</p>
-            <div class="ad-owner">
+            <div class="update-owner">
+                <p class="ad-p update">Last updated: ${date.toLocaleDateString()}</p>
+                <div class="ad-owner">
+                </div>
             </div>
         </div>
     `
