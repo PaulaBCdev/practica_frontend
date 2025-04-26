@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "name": "Paula",
+      "username": "paula@gmail.com",
+      "password": "$2b$10$5uQh3Gp2SLFio09UwxSj5OO6OebKR8StWUNaKAkRpEwvGYiDDz/pa",
+      "id": 1
+    },
+    {
+      "name": "Lorenzo",
+      "username": "lorenzo@gmail.com",
+      "password": "$2b$10$BvbnVVzFZdrgHQR1bV2BD.AqUHE8ih/62xW7iLqhNf22DLQu00Oru",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "gatito gris",
+      "description": "Un gatito muy bonito gris",
+      "price": "4",
+      "type": "sell",
+      "photo": "http://localhost:8000//file-1744814065183.png",
+      "userId": 1,
+      "updatedAt": "2025-04-16T14:34:25.570Z",
+      "id": 3
+    },
+    {
+      "name": "Fullmetal Alchemist vol.18",
+      "description": "Ultimo volumen de la edicion kanzenban de Fullmetal Alchemist",
+      "price": "12",
+      "type": "buy",
+      "photo": "http://localhost:8000//file-1745344164693.webp",
+      "userId": 1,
+      "updatedAt": "2025-04-22T17:49:24.700Z",
+      "id": 4
+    },
+    {
+      "name": "tapete rapunzel",
+      "description": "tapete del juego de cartas lorcana",
+      "price": "14",
+      "type": "sell",
+      "photo": "http://localhost:8000//file-1745585567589.jpg",
+      "userId": 2,
+      "updatedAt": "2025-04-25T12:52:47.596Z",
+      "id": 5
+    },
+    {
+      "name": "gatitos programadores",
+      "description": "busco gatitos que puedan programar una app web de adopción de gatitos",
+      "price": "25",
+      "type": "buy",
+      "photo": "http://localhost:8000//file-1745665221530.jpg",
+      "userId": 2,
+      "updatedAt": "2025-04-26T11:00:21.723Z",
+      "id": 6
+    },
+    {
+      "name": "Zapatillas Nike",
+      "description": "Busco unas zapatillas de la marca Nike pa hacerme el chulo",
+      "price": "40",
+      "type": "buy",
+      "photo": null,
+      "userId": 2,
+      "updatedAt": "2025-04-26T11:01:30.293Z",
+      "id": 7
+    }
+  ]
+}
